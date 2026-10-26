@@ -12,9 +12,9 @@
   --color-text-dark: #1A1A1A;
   --color-text-green: #2D5016;
 
-  --font-heading: 'Albert Sans';
-  --font-body: 'Albert Sans';
-  --font-bubble: 'Titan One', cursive;
+  --font-heading: var(--font-albert-sans), sans-serif;
+  --font-body: var(--font-albert-sans), sans-serif;
+  --font-bubble: var(--font-titan-one), cursive;
 
   --max-width: 1440px;
   --header-height: 80px;
@@ -617,6 +617,17 @@ ul {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-text-dark);
+}
+
+.contact__company-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.contact__company-link:hover {
+  opacity: 0.7;
 }
 
 .contact__email-row {

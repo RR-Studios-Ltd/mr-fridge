@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { asset } from '@/lib/paths';
 import { usePathname } from 'next/navigation';
 import type { Dictionary } from '@/lib/de';
 import type { Locale } from '@/lib/i18n';
@@ -37,7 +38,7 @@ export default function Header({ dict, locale }: HeaderProps) {
     <header className="header" role="banner">
       <Link href={`/${locale}`} className="header__logo-link" aria-label="Mr. Fridge Home">
         <Image
-          src="/images/logo.png"
+          src={asset('/images/logo.png')}
           alt="Mr. Fridge"
           width={220}
           height={60}

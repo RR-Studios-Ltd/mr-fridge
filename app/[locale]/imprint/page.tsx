@@ -1,8 +1,16 @@
 import { getDictionary } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
+import { pageMetadata } from '@/lib/metadata';
+import type { Metadata } from 'next';
 
 interface Props {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = getDictionary(locale as Locale);
+  return pageMetadata(locale as Locale, '/imprint', `${dict.imprint.title} | Mr. Fridge`, dict.imprint.metaDescription);
 }
 
 export default async function ImprintPage({ params }: Props) {
@@ -49,16 +57,6 @@ export default async function ImprintPage({ params }: Props) {
         </p>
       </div>
       
-      <div className="imprint__block">
-        <h2 className="imprint__subtitle">{dict.imprint.euRepTitle}</h2>
-        <p className="imprint__text">{dict.imprint.euRepName}</p>
-        <p className="imprint__text">
-          <span className="imprint__label">{dict.imprint.euRepEmailLabel}:</span>{' '}
-          <a href={`mailto:${dict.imprint.euRepEmail}`} className="imprint__link">
-            {dict.imprint.euRepEmail}
-          </a>
-        </p>
-      </div>
 
       <div className="imprint__block">
         <h2 className="imprint__subtitle">{dict.imprint.disclaimerTitle}</h2>

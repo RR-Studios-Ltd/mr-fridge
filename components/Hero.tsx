@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { asset } from '@/lib/paths';
 import type { Dictionary } from '@/lib/de';
 import type { Locale } from '@/lib/i18n';
 
@@ -18,7 +19,7 @@ export default function Hero({ dict, locale }: HeroProps) {
 
         <div className="hero__visual-content">
           <Image
-            src="/images/import_recipes.png"
+            src={asset('/images/import_recipes.png')}
             alt=""
             width={80}
             height={80}
@@ -26,7 +27,7 @@ export default function Hero({ dict, locale }: HeroProps) {
             aria-hidden="true"
           />
           <Image
-            src="/images/photo_add.png"
+            src={asset('/images/photo_add.png')}
             alt=""
             width={80}
             height={80}
@@ -34,7 +35,7 @@ export default function Hero({ dict, locale }: HeroProps) {
             aria-hidden="true"
           />
           <Image
-            src="/images/recipes.png"
+            src={asset('/images/recipes.png')}
             alt=""
             width={90}
             height={90}
@@ -57,7 +58,7 @@ export default function Hero({ dict, locale }: HeroProps) {
 
         {/* Mascot at the boundary */}
         <Image
-          src="/images/mr_fridge.png"
+          src={asset('/images/mr_fridge.png')}
           alt="Mr. Fridge mascot – a friendly fridge character wearing a chef hat"
           width={240}
           height={320}

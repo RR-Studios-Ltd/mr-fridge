@@ -1,9 +1,17 @@
 import { getDictionary } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
+import { pageMetadata } from '@/lib/metadata';
+import type { Metadata } from 'next';
 import { AccordionItem } from '@/components/Accordion';
 
 interface Props {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = getDictionary(locale as Locale);
+  return pageMetadata(locale as Locale, '/faq', `${dict.faq.title} | Mr. Fridge`, dict.faq.metaDescription);
 }
 
 export default async function FAQPage({ params }: Props) {

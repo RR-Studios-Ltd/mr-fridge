@@ -6,7 +6,7 @@ A static, SEO-optimized Next.js website for **Mr. Fridge**, available in German 
 
 ```bash
 npm install
-npm run dev       # Development at http://localhost:3000
+npm run dev       # Development at http://localhost:3000/mr-fridge
 npm run build     # Static export to ./out
 ```
 
@@ -16,10 +16,11 @@ npm run build     # Static export to ./out
 mr-fridge/
 ├── app/
 │   ├── globals.css            # Global styles & design system
-│   ├── layout.tsx             # Root layout (fonts, meta)
-│   ├── page.tsx               # Root redirect → /de
+│   ├── manifest.ts            # Web app manifest
+│   ├── sitemap.ts             # sitemap.xml (linked from robots.txt on the main site)
+│   ├── (root)/                # Root redirect → /de (meta refresh)
 │   └── [locale]/
-│       ├── layout.tsx         # Per-locale layout (header, footer, SEO meta)
+│       ├── layout.tsx         # Root layout per locale (<html lang>, fonts, header, footer)
 │       ├── page.tsx           # Home page (hero section)
 │       ├── faq/page.tsx       # FAQ placeholder
 │       ├── features/page.tsx  # Features placeholder

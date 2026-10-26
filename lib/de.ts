@@ -26,6 +26,8 @@ const de = {
   },
   faq: {
     title: 'Häufig gestellte Fragen',
+    metaDescription:
+      'Antworten auf häufige Fragen zu Mr. Fridge: Vorrat verwalten, Rezepte aus vorhandenen Zutaten finden, Essenspläne und Einkaufslisten.',
     items: [
       {
         question: 'Was ist Mr. Fridge?',
@@ -53,7 +55,8 @@ const de = {
   },
   imprint: {
     title: 'Impressum',
-    providerTitle: 'Anbieterkennzeichnung gemäß § 5 TMG',
+    metaDescription: 'Impressum und Anbieterkennzeichnung der RR Studios Ltd, Anbieter der App Mr. Fridge.',
+    providerTitle: 'Anbieterkennzeichnung gemäß § 5 DDG',
     company: 'RR Studios Ltd',
     address: '20 Wenlock Road\nN1 7GU\nLondon, England',
     directorLabel: 'Geschäftsführerin',
@@ -68,10 +71,6 @@ const de = {
     disclaimerTitle: 'Haftungsausschluss',
     disclaimerContent:
       'Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.',
-    euRepTitle: 'EU-Vertretung (Art. 27 DSGVO)',
-    euRepName: '[Name / Unternehmen]',
-    euRepEmailLabel: 'E-Mail',
-    euRepEmail: '[email@example.com]',
     odrTitle: 'Online-Streitbeilegung',
     odrText:
       'Die Europäische Kommission stellt eine Plattform für Verbraucherrechtsbehelfe bereit:',
@@ -81,6 +80,8 @@ const de = {
   },
   contact: {
     title: 'Kontakt',
+    metaDescription:
+      'Fragen, Anregungen oder Feedback zu Mr. Fridge? Schreib uns eine E-Mail – wir antworten in der Regel innerhalb von 48 Stunden.',
     description:
       'Bei Fragen, Anregungen oder sonstigem Feedback schreib uns gerne eine E-Mail. Wir freuen uns über alle Nachrichten und versuchen, so schnell wie möglich zu antworten.',
     responseNote: 'Wir antworten in der Regel innerhalb von 48 Stunden.',
