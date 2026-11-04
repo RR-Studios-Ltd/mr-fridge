@@ -357,18 +357,6 @@ ul {
   opacity: 0.9;
 }
 
-.hero__coming-soon-text {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--color-green-dark);
-  background: var(--color-white);
-  padding: 14px 28px;
-  border-radius: 12px;
-  border: 2px dashed var(--color-green-mid);
-  text-align: center;
-}
-
 .hero__mascot {
   position: absolute;
   bottom: 0;
@@ -753,7 +741,7 @@ ul {
   }
 
   .hero__bubble-text {
-    margin-top: 0;
+    margin-top: 48px;
   }
 
   .hero__download {
@@ -933,11 +921,6 @@ ul {
 
   .hero__bubble-text {
     font-size: 1.15rem;
-  }
-
-  .hero__coming-soon-text {
-    font-size: 1rem;
-    padding: 12px 20px;
   }
 
   .hero__cta-label {

@@ -8,9 +8,7 @@ interface HeroProps {
   locale: Locale;
 }
 
-export default function Hero({ dict, locale }: HeroProps) {
-  const isEnglish = locale === 'en';
-
+export default function Hero({ dict }: HeroProps) {
   return (
     <section className="hero" aria-labelledby="hero-heading">
       {/* Left side – dark green background with cream two-pillar shape */}
@@ -46,13 +44,7 @@ export default function Hero({ dict, locale }: HeroProps) {
           <p className="hero__bubble-text">{dict.hero.bubble}</p>
 
           <div className="hero__download">
-            {isEnglish ? (
-              <p className="hero__coming-soon-text">English version coming soon!</p>
-            ) : (
-              <>
-                <p className="hero__cta-label">{dict.hero.cta}</p>
-              </>
-            )}
+            <p className="hero__cta-label">{dict.hero.cta}</p>
           </div>
         </div>
 
