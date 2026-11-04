@@ -62,6 +62,7 @@ ul {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 .page-main {
@@ -726,11 +727,51 @@ ul {
 @media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
 
+  /* Stack content in normal flow so the green section grows with it */
   .hero__visual {
-    min-height: 60vh;
-    padding: 40px 24px;
+    min-height: auto;
+    padding: 0 16px;
+    overflow: hidden;
+  }
+
+  /* Semicircular top; a 50% radius turns into an oval on tall, narrow screens */
+  .hero__pillar {
+    top: 32px;
+    border-radius: 45vw 45vw 0 0;
+  }
+
+  .hero__visual-content {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin-top: 0;
+    padding: 160px 16px 200px;
+    gap: 24px;
+  }
+
+  .hero__bubble-text {
+    margin-top: 0;
+  }
+
+  .hero__download {
+    margin-top: 0;
+  }
+
+  .hero__floating-icon--checklist {
+    top: 48px;
+    left: 0;
+  }
+
+  .hero__floating-icon--phone {
+    top: 56px;
+  }
+
+  .hero__floating-icon--pan {
+    top: 64px;
+    right: 0;
   }
 
   .hero__mascot {
@@ -749,11 +790,25 @@ ul {
 
 @media (max-width: 768px) {
   .header {
-    padding: 12px 20px;
+    padding: 12px 16px;
   }
 
+  /* Logo offsets scaled down from the 110px desktop logo */
   .header__logo-img {
-    height: 38px;
+    height: 60px;
+    margin-top: -10px;
+  }
+
+  .header__logo-tagline {
+    font-size: 0.6rem;
+    line-height: 1.3;
+    letter-spacing: 0.08em;
+    margin-top: -18px;
+    margin-left: 20px;
+  }
+
+  .header__nav {
+    margin-right: 0;
   }
 
   .header__nav {
@@ -764,12 +819,12 @@ ul {
     font-size: 0.9rem;
   }
 
-  .hero__visual {
-    min-height: 50vh;
+  .hero__visual-content {
+    padding-bottom: 160px;
   }
 
   .hero__bubble-text {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   .hero__mascot {
@@ -844,21 +899,49 @@ ul {
 }
 
 @media (max-width: 480px) {
+  .header__logo-img {
+    height: 52px;
+    margin-top: -8px;
+  }
+
+  .header__logo-tagline {
+    font-size: 0.55rem;
+    margin-top: -16px;
+    margin-left: 17px;
+  }
+
   .header__nav {
-    gap: 12px;
+    gap: 10px;
   }
 
   .header__nav-link {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .lang-switcher {
-    padding: 4px 12px;
-    font-size: 0.85rem;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+
+  .hero__visual-content {
+    padding: 130px 8px 130px;
+  }
+
+  .hero__floating-icon {
+    width: 64px;
   }
 
   .hero__bubble-text {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+  }
+
+  .hero__coming-soon-text {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .hero__cta-label {
+    font-size: 1.15rem;
   }
 
   .hero__mascot {
